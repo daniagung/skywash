@@ -11,14 +11,14 @@ class Admin_login extends CI_Controller {
 	function index() {
 		$data['outlet']=$this->Model_general->getData('wl_outlet','outlet_code');
 		if($_POST==NULL){
-			$data['page_title'] = "Waroenk Laundry | Login Admin";
+			$data['page_title'] = "Hai Laundry | Login Admin";
 			$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_login','index') );
 			$data['error']='NO';
 			
 			$this->load->view('admin/sx_login', $data);
 		} else {
 			if ($this->form_validation->run('login') == FALSE){
-				$data['page_title'] = "Waroenk Laundry | Login Admin";
+				$data['page_title'] = "Hai Laundry | Login Admin";
 				$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_login','index') );
 				$data['error']='YES';
 				$this->load->view('admin/sx_login', $data);

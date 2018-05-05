@@ -12,7 +12,7 @@ class Admin_finance extends CI_Controller {
 	
 	function index(){
 		$data['content'] = 'admin/finance/ak_home';
-		$data['page_title'] = "Waroenk Laundry | Keuangan";
+		$data['page_title'] = "Hai Laundry | Keuangan";
 		
 		$this->load->view('admin/template', $data);
 	}
@@ -20,7 +20,7 @@ class Admin_finance extends CI_Controller {
 	// JURNAL
 	function jurnal($error){
 		$data['content'] = 'admin/finance/ak_jurnal';
-		$data['page_title'] = "Waroenk Laundry | Jurnal";
+		$data['page_title'] = "Hai Laundry | Jurnal";
 		$data['form_jurnal'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_finance','jurnal',array($error)) );
 		$data['dbout'] = $this->Model_general->getData("wl_outlet","outlet_code");
 		$data['cetakJurnal'] = "";
@@ -73,7 +73,7 @@ class Admin_finance extends CI_Controller {
 	}
 	function jurnal_penyesuaian($error){
 		$data['content'] = 'admin/finance/ak_jurnal_penyesuaian';
-		$data['page_title'] = "Waroenk Laundry | Jurnal Penyesuaian";
+		$data['page_title'] = "Hai Laundry | Jurnal Penyesuaian";
 		$data['form_jurnal'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_finance','jurnal_penyesuaian_process') );
 		$data['dbkel'] = $this->Model_general->getData("master_akun","kode_akun");
 		$data['simpan'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_finance','jurnal_penyesuaian_simpan') );
@@ -167,7 +167,7 @@ class Admin_finance extends CI_Controller {
 	// PENGELUARAN
 	function input($error){
 		$data['content'] = 'admin/finance/kas_input';
-		$data['page_title'] = "Waroenk Laundry | Input Pengeluaran";
+		$data['page_title'] = "Hai Laundry | Input Pengeluaran";
 		$data['dbKeluar'] = $this->Model_general->getDataBy("master_akun","jenis_akun",2);
 		$data['form_kas'] = site_url( $this->mza_secureurl->setSecureUrl_encode("admin_finance","input_process") );
 		$data['status_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode("admin_finance","input",array("NO")) );
@@ -283,7 +283,7 @@ class Admin_finance extends CI_Controller {
 	// BUKU BESAR
 	function buku($error){
 		$data['content'] = 'admin/finance/ak_buku';
-		$data['page_title'] = "Waroenk Laundry | Buku Besar";
+		$data['page_title'] = "Hai Laundry | Buku Besar";
 		$data['form_buku'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_finance','buku',array($error)) );
 		$data['dbkel'] = $this->Model_general->getData("master_akun","nama_akun");
 		$data['cetakBuku'] = "";
@@ -360,7 +360,7 @@ class Admin_finance extends CI_Controller {
 	// NERACA SALDO
 	function neracaSaldo($error){
 		$data['content'] = 'admin/finance/ak_nsaldo';
-		$data['page_title'] = "Waroenk Laundry | Neraca Saldo";
+		$data['page_title'] = "Hai Laundry | Neraca Saldo";
 		$data['form_neraca'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_finance','neracaSaldo',array($error)) );
 		$data['cetakNeraca'] = "";
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_finance','index') );
@@ -431,7 +431,7 @@ class Admin_finance extends CI_Controller {
 	// LABA RUGI
 	function labarugi($error){
 		$data['content'] = 'admin/finance/ak_labarugi';
-		$data['page_title'] = "Waroenk Laundry | Laba / Rugi";
+		$data['page_title'] = "Hai Laundry | Laba / Rugi";
 		$data['form_lr'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_finance','labarugi',array($error)) );
 		$data['cetakLR'] = "";
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_finance','index') );
@@ -533,7 +533,7 @@ class Admin_finance extends CI_Controller {
 	// NERACA
 	function neraca($error){
 		$data['content'] = 'admin/finance/ak_neraca';
-		$data['page_title'] = "Waroenk Laundry | Neraca";
+		$data['page_title'] = "Hai Laundry | Neraca";
 		$data['form_neraca'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_finance','neraca',array($error)) );
 		$data['cetakNeraca'] = "";
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_finance','index') );

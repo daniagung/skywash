@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 	
 	function index($error){
 		$data['content'] = 'main/sx_home';
-		$data['page_title'] = "Waroenk Laundry | Selamat Datang";
+		$data['page_title'] = "Hai Laundry | Selamat Datang";
 		$data['kar_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('karyawan','login') );
 		$data['pengeluaran'] = $this->Model_laundry->ambilKeluarApp($this->session->userdata("id"))->num_rows();
 		$data['error'] = $error;

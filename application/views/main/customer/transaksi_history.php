@@ -1,5 +1,5 @@
 <head>
-	<title>Waroenk Laundry | History Transaksi</title>
+	<title>Hai Laundry | History Transaksi</title>
 	<script language="JavaScript">
 		function loadprint(){
 			window.print();

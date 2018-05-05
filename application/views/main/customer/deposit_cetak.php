@@ -1,5 +1,5 @@
 <head>
-	<title>Waroenk Laundry | Resi Transaksi</title>
+	<title>Hai Laundry | Resi Transaksi</title>
 	<script language="JavaScript">
 		window.print();
 		window.onfocus=function(){ window.close(); }

@@ -13,7 +13,7 @@ class Customer extends CI_Controller {
 	// MEMBER
 	function member(){
 		$data['content'] = 'main/customer/member';
-		$data['page_title'] = "Waroenk Laundry | Member";
+		$data['page_title'] = "Hai Laundry | Member";
 		$data['tabelMember'] = $this->tabelMember();
 		$data['addlink'] = anchor( $this->mza_secureurl->setSecureUrl_encode('customer','member_form',array(0,'Tambah','NO')),'Member Baru', array('class' => 'add') );
 		$data['warning'] = anchor( $this->mza_secureurl->setSecureUrl_encode('customer','kirimWarning'),'SMS Warning', array('class' => 'sms') );
@@ -22,7 +22,7 @@ class Customer extends CI_Controller {
 		$this->load->view('template', $data);
 	}
 	function member_form($id,$status,$error){
-		$data['page_title'] = "Waroenk Laundry | Member";
+		$data['page_title'] = "Hai Laundry | Member";
 		$data['content'] = 'main/customer/member_form';
 		$data['deposit_action']= site_url( $this->mza_secureurl->setSecureUrl_encode('customer','deposit_process',array($id)) );
 		$data['link'] = anchor( $this->mza_secureurl->setSecureUrl_encode('customer','member'),'Kembali',array('class' => 'back') );
@@ -258,7 +258,7 @@ class Customer extends CI_Controller {
 		return $this->table->generate();
 	}
 	function printHMember($member){
-		$data['page_title'] = "Waroenk Laundry | History Transaksi";
+		$data['page_title'] = "Hai Laundry | History Transaksi";
 		$data['tRow'] = $this->Model_laundry->histMember($member,$this->session->userdata('id'))->result();
 		$data['outlet'] = $this->Model_laundry->ambilOutletBy("outlet_id",$this->session->userdata('id'))->row();
 		
@@ -399,21 +399,21 @@ class Customer extends CI_Controller {
 	}
 	function detailDeposit($dresi){
 		$data['content'] = 'main/customer/deposit_detail';
-		$data['page_title'] = "Waroenk Laundry | Deposit";
+		$data['page_title'] = "Hai Laundry | Deposit";
 		$data['tRow'] = $this->Model_laundry->ambilDeposit($dresi)->row();
 		
 		$this->load->view('template', $data);
 	}
 	function cetakDeposit($resi){
 		$content = 'main/customer/deposit_cetak';
-		$data['page_title'] = "Waroenk Laundry | Transaksi";
+		$data['page_title'] = "Hai Laundry | Transaksi";
 		$data['tRow'] = $this->Model_laundry->ambilDeposit($resi)->row();
 		$data['outlet'] = $this->Model_laundry->ambilOutletBy("outlet_id",$this->session->userdata('id'))->row();
 		
 		$this->load->view($content, $data);
 	}
 	function printHDepo($member){
-		$data['page_title'] = "Waroenk Laundry | History Deposit";
+		$data['page_title'] = "Hai Laundry | History Deposit";
 		$data['tRow'] = $this->Model_laundry->histDeposit($member,$this->session->userdata('id'))->result();
 		$data['outlet'] = $this->Model_laundry->ambilOutletBy("outlet_id",$this->session->userdata('id'))->row();
 		
@@ -506,7 +506,7 @@ class Customer extends CI_Controller {
 	// NON MEMBER
 	function nonmem(){
 		$data['content'] = 'main/customer/member';
-		$data['page_title'] = "Waroenk Laundry | Non Member";
+		$data['page_title'] = "Hai Laundry | Non Member";
 		$data['tabelMember'] = $this->tabelNon();
 		$data['tLegend'] = "NON MEMBER";
 		$data['addlink'] = anchor( $this->mza_secureurl->setSecureUrl_encode('customer','non_form',array(0,'Tambah','NO')),'Pelanggan Baru', array('class' => 'add') );
@@ -516,7 +516,7 @@ class Customer extends CI_Controller {
 	}
 	function non_form($id,$status,$error){
 		$data['content'] = 'main/customer/non_form';
-		$data['page_title'] = "Waroenk Laundry | Non Member";
+		$data['page_title'] = "Hai Laundry | Non Member";
 		$data['form_member']= site_url( $this->mza_secureurl->setSecureUrl_encode('customer','non_process',array($id,$status)) );
 		$data['tRow'] = $this->Model_general->getDataBy("wl_member_non","id_non",$id)->row();
 		$data['link'] = anchor($this->mza_secureurl->setSecureUrl_encode('customer','nonmem'),'Kembali',array('class'=>'back'));
@@ -644,7 +644,7 @@ class Customer extends CI_Controller {
 		return $this->table->generate();
 	}
 	function printHNon($id){
-		$data['page_title'] = "Waroenk Laundry | History Transaksi";
+		$data['page_title'] = "Hai Laundry | History Transaksi";
 		$data['tRow'] = $this->Model_laundry->histNon($id,$this->session->userdata('id'))->result();
 		$data['outlet'] = $this->Model_laundry->ambilOutletBy("outlet_id",$this->session->userdata('id'))->row();
 		
@@ -654,7 +654,7 @@ class Customer extends CI_Controller {
 	// KOMPLAIN
 	function komplain(){
 		$data['content'] = 'main/customer/member';
-		$data['page_title'] = "Waroenk Laundry | Komplain";
+		$data['page_title'] = "Hai Laundry | Komplain";
 		$data['tabelMember'] = $this->tabelKomplain();
 		$data['tLegend'] = "KOMPLAIN";
 		

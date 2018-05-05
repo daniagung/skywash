@@ -14,7 +14,7 @@ class Invest_grafik extends CI_Controller {
 	
 	function cuciArea(){
 		$data['content'] = 'invest/laporan/g_Area';
-		$data['page_title'] = "Waroenk Laundry | Frekuensi Transaksi";
+		$data['page_title'] = "Hai Laundry | Frekuensi Transaksi";
 		$data['dbarea'] = $this->Model_report->getArea();
 		$data['g_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_grafik','cuciArea') );
 		
@@ -74,7 +74,7 @@ class Invest_grafik extends CI_Controller {
 	
 	function cuciProd(){
 		$data['content'] = 'invest/laporan/g_Non';
-		$data['page_title'] = "Waroenk Laundry | Frekuensi Transaksi";
+		$data['page_title'] = "Hai Laundry | Frekuensi Transaksi";
 		$data['dbarea'] = $this->Model_report->getArea();
 		$data['g_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_grafik','cuciProd') );
 		
@@ -132,7 +132,7 @@ class Invest_grafik extends CI_Controller {
 	
 	function cuciCust(){
 		$data['content']="invest/laporan/g_Cust";
-		$data['page_title'] = "Waroenk Laundry | Frekuensi Transaksi";
+		$data['page_title'] = "Hai Laundry | Frekuensi Transaksi";
 		$data['form_sms']= site_url( $this->mza_secureurl->setSecureUrl_encode('invest_grafik','cuciCust') );
 		$data['form_crm']= site_url( $this->mza_secureurl->setSecureUrl_encode('invest_grafik','custSend') );
 		$data['dbarea'] = $this->Model_report->getArea();
@@ -198,7 +198,7 @@ class Invest_grafik extends CI_Controller {
 	
 	function statusTrans(){
 		$data['content'] = 'invest/laporan/g_Status';
-		$data['page_title'] = "Waroenk Laundry | Status Transaksi";
+		$data['page_title'] = "Hai Laundry | Status Transaksi";
 		$data['g_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_grafik','statusTrans') );
 		$from = $this->input->post('dari');
 		$to = $this->input->post('sampai');
@@ -295,7 +295,7 @@ class Invest_grafik extends CI_Controller {
 	
 	function omset(){
 		$data['content'] = 'invest/laporan/g_Omset';
-		$data['page_title'] = "Waroenk Laundry | Laporan";
+		$data['page_title'] = "Hai Laundry | Laporan";
 		$data['g_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_grafik','omset') );
 		
 		if($_POST==NULL){
@@ -335,7 +335,7 @@ class Invest_grafik extends CI_Controller {
 	
 	function kinerja(){
 		$data['content'] = 'invest/laporan/g_kinerja';
-		$data['page_title'] = "Waroenk Laundry | Laporan";
+		$data['page_title'] = "Hai Laundry | Laporan";
 		$data['dbPegawai'] = $this->Model_user->get_pegawai($this->session->userdata('out'));
 		$data['kinerja_f'] = site_url( $this->mza_secureurl->setSecureUrl_encode("invest_grafik","kinerja") );
 		$nip = $this->input->post('nip');

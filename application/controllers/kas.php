@@ -12,7 +12,7 @@ class Kas extends CI_Controller {
 	
 	function input($error){
 		$data['content'] = 'main/activity/second/kas_input';
-		$data['page_title'] = "Waroenk Laundry | Input Pengeluaran";
+		$data['page_title'] = "Hai Laundry | Input Pengeluaran";
 		$data['dbKeluar'] = $this->Model_general->getDataBy("master_akun","user_akun",2);
 		$data['form_kas'] = site_url( $this->mza_secureurl->setSecureUrl_encode("kas","input_process") );
 		$data['status_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode("kas","input",array("NO")) );
@@ -152,7 +152,7 @@ class Kas extends CI_Controller {
 	
 	function nabung($error){
 		$data['content'] = 'main/activity/second/kas_nabung';
-		$data['page_title'] = "Waroenk Laundry | Transfer Kas";
+		$data['page_title'] = "Hai Laundry | Transfer Kas";
 		$data['form_kas'] = site_url( $this->mza_secureurl->setSecureUrl_encode("kas","nabung_process") );
 		$data['status_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode("kas","nabung",array("NO")) );
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode("home","index",array("NO")) );
@@ -211,7 +211,7 @@ class Kas extends CI_Controller {
 	
 	function histori($error){
 		$data['content'] = 'main/activity/second/kas_history';
-		$data['page_title'] = "Waroenk Laundry | Histori Kas";
+		$data['page_title'] = "Hai Laundry | Histori Kas";
 		$data['form_jurnal'] = site_url( $this->mza_secureurl->setSecureUrl_encode('kas','histori',array($error)) );
 		$data['error'] = $error;
 		

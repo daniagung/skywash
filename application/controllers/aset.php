@@ -12,7 +12,7 @@ class Aset extends CI_Controller {
 	// ASET
 	function index($error){
 		$data['content'] = 'main/activity/second/second';
-		$data['page_title'] = "Waroenk Laundry | Perawatan Aset";
+		$data['page_title'] = "Hai Laundry | Perawatan Aset";
 		$data['tLegend'] = "Perawatan Aset";
 		$data['tabelSecond'] = $this->tabelAset();
 		$data['error'] = $error;
@@ -22,7 +22,7 @@ class Aset extends CI_Controller {
 	
 	function rawat_form($id,$jenis,$error){
 		$data['content'] = 'main/activity/second/rawat_form';
-		$data['page_title'] = "Waroenk Laundry | Perawatan Aset";
+		$data['page_title'] = "Hai Laundry | Perawatan Aset";
 		$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode("aset","rawat_proses",array($id,$jenis)) );
 		$data['tRow'] = $this->Model_laundry->ambilAsetBy("id_aset",$id)->row();
 		$data['dbRawat'] = $this->Model_general->getDataBy("master_rawat","kode_jenis",$jenis)->result();

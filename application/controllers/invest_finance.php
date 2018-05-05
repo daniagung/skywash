@@ -12,7 +12,7 @@ class Invest_finance extends CI_Controller {
 	
 	function index(){
 		$data['content'] = 'invest/finance/ak_home';
-		$data['page_title'] = "Waroenk Laundry | Keuangan";
+		$data['page_title'] = "Hai Laundry | Keuangan";
 		
 		$this->load->view('invest/template', $data);
 	}
@@ -20,7 +20,7 @@ class Invest_finance extends CI_Controller {
 	// JURNAL
 	function jurnal($error){
 		$data['content'] = 'invest/finance/ak_jurnal';
-		$data['page_title'] = "Waroenk Laundry | Jurnal";
+		$data['page_title'] = "Hai Laundry | Jurnal";
 		$data['form_jurnal'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_finance','jurnal',array($error)) );
 		$data['dbout'] = $this->Model_general->getData("wl_outlet","outlet_code");
 		$data['cetakJurnal'] = "";
@@ -72,7 +72,7 @@ class Invest_finance extends CI_Controller {
 	// BUKU BESAR
 	function buku($error){
 		$data['content'] = 'invest/finance/ak_buku';
-		$data['page_title'] = "Waroenk Laundry | Buku Besar";
+		$data['page_title'] = "Hai Laundry | Buku Besar";
 		$data['form_buku'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_finance','buku',array($error)) );
 		$data['dbkel'] = $this->Model_general->getData("master_akun","nama_akun");
 		$data['cetakBuku'] = "";
@@ -149,7 +149,7 @@ class Invest_finance extends CI_Controller {
 	// NERACA SALDO
 	function neracaSaldo($error){
 		$data['content'] = 'invest/finance/ak_nsaldo';
-		$data['page_title'] = "Waroenk Laundry | Neraca Saldo";
+		$data['page_title'] = "Hai Laundry | Neraca Saldo";
 		$data['form_neraca'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_finance','neracaSaldo',array($error)) );
 		$data['cetakNeraca'] = "";
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_finance','index') );
@@ -220,7 +220,7 @@ class Invest_finance extends CI_Controller {
 	// LABA RUGI
 	function labarugi($error){
 		$data['content'] = 'invest/finance/ak_labarugi';
-		$data['page_title'] = "Waroenk Laundry | Laba / Rugi";
+		$data['page_title'] = "Hai Laundry | Laba / Rugi";
 		$data['form_lr'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_finance','labarugi',array($error)) );
 		$data['cetakLR'] = "";
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_finance','index') );
@@ -322,7 +322,7 @@ class Invest_finance extends CI_Controller {
 	// NERACA
 	function neraca($error){
 		$data['content'] = 'invest/finance/ak_neraca';
-		$data['page_title'] = "Waroenk Laundry | Neraca";
+		$data['page_title'] = "Hai Laundry | Neraca";
 		$data['form_neraca'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_finance','neraca',array($error)) );
 		$data['cetakNeraca'] = "";
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_finance','index') );

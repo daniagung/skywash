@@ -14,7 +14,7 @@ class Admin_grafik extends CI_Controller {
 	
 	function cuciArea(){
 		$data['content'] = 'admin/laporan/g_Area';
-		$data['page_title'] = "Waroenk Laundry | Frekuensi Transaksi";
+		$data['page_title'] = "Hai Laundry | Frekuensi Transaksi";
 		$data['dbarea'] = $this->Model_report->getArea();
 		$data['g_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_grafik','cuciArea') );
 		$data['s_Send']= site_url( $this->mza_secureurl->setSecureUrl_encode('admin_grafik','cuciSend') );
@@ -74,7 +74,7 @@ class Admin_grafik extends CI_Controller {
 	}
 	function cuciProd(){
 		$data['content'] = 'admin/laporan/g_Non';
-		$data['page_title'] = "Waroenk Laundry | Frekuensi Transaksi";
+		$data['page_title'] = "Hai Laundry | Frekuensi Transaksi";
 		$data['dbarea'] = $this->Model_report->getArea();
 		$data['g_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_grafik','cuciProd') );
 		$data['s_Send']= site_url( $this->mza_secureurl->setSecureUrl_encode('admin_grafik','cuciSend') );
@@ -153,7 +153,7 @@ class Admin_grafik extends CI_Controller {
 	
 	function cuciCust(){
 		$data['content']="admin/laporan/g_Cust";
-		$data['page_title'] = "Waroenk Laundry | Frekuensi Transaksi";
+		$data['page_title'] = "Hai Laundry | Frekuensi Transaksi";
 		$data['form_sms']= site_url( $this->mza_secureurl->setSecureUrl_encode('admin_grafik','cuciCust') );
 		$data['form_crm']= site_url( $this->mza_secureurl->setSecureUrl_encode('admin_grafik','custSend') );
 		$data['dbarea'] = $this->Model_report->getArea();
@@ -266,7 +266,7 @@ class Admin_grafik extends CI_Controller {
 	
 	function krisan($id){
 		$data['content'] = 'admin/laporan/g_Respon';
-		$data['page_title'] = "Waroenk Laundry | Respon Pelanggan";
+		$data['page_title'] = "Hai Laundry | Respon Pelanggan";
 		$data['tableKris'] = $this->tabelKrisan();
 		if($id > -1){
 			$data['pesan'] = $this->Model_general->getDataBy("ad_shout","id_shout",$id)->row();
@@ -341,7 +341,7 @@ class Admin_grafik extends CI_Controller {
 	
 	function statusTrans(){
 		$data['content'] = 'admin/laporan/g_Status';
-		$data['page_title'] = "Waroenk Laundry | Status Transaksi";
+		$data['page_title'] = "Hai Laundry | Status Transaksi";
 		$data['g_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_grafik','statusTrans') );
 		$from = $this->input->post('dari');
 		$to = $this->input->post('sampai');
@@ -438,7 +438,7 @@ class Admin_grafik extends CI_Controller {
 	
 	function omset(){
 		$data['content'] = 'admin/laporan/g_Omset';
-		$data['page_title'] = "Waroenk Laundry | Laporan";
+		$data['page_title'] = "Hai Laundry | Laporan";
 		$data['g_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_grafik','omset') );
 		
 		if($_POST==NULL){
@@ -478,7 +478,7 @@ class Admin_grafik extends CI_Controller {
 	
 	function kinerja(){
 		$data['content'] = 'admin/laporan/g_kinerja';
-		$data['page_title'] = "Waroenk Laundry | Laporan";
+		$data['page_title'] = "Hai Laundry | Laporan";
 		$data['dbPegawai'] = $this->Model_user->get_pegawai($this->session->userdata('out'));
 		$data['kinerja_f'] = site_url( $this->mza_secureurl->setSecureUrl_encode("admin_grafik","kinerja") );
 		$nip = $this->input->post('nip');

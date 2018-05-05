@@ -17,7 +17,7 @@ class Administrator extends CI_Controller {
 	// OUTLET
 	function outlet($outlet){
 		$data['content'] = 'admin/setting/setting_outlet';
-		$data['page_title'] = "Waroenk Laundry | Administrator";
+		$data['page_title'] = "Hai Laundry | Administrator";
 		$this->load->view('admin/template', $data);
 	}
 	function ganti_outlet(){
@@ -28,7 +28,7 @@ class Administrator extends CI_Controller {
 		if($status == "Tambah" || $status == "Pass")
 			$status = "Ubah";
 			
-		$data['page_title'] = "Waroenk Laundry | Administrator - Outlet";
+		$data['page_title'] = "Hai Laundry | Administrator - Outlet";
 		$data['content'] = 'admin/setting/outlet_form';
 		$data['error'] = $error;
 		$data['dbzona'] = $this->Model_general->getData("zona","zona_name");
@@ -227,7 +227,7 @@ class Administrator extends CI_Controller {
 	// LAYANAN
 	function layanan($outlet){
 		$data['content'] = 'admin/setting/setting_layanan';
-		$data['page_title'] = "Waroenk Laundry | Administrator";
+		$data['page_title'] = "Hai Laundry | Administrator";
 		$data['dbKilo'] = $this->Model_laundry->ambilLaundryBy($outlet,"jenis","Kiloan");
 		$data['dbNon'] = $this->Model_laundry->ambilLaundryBy($outlet,"jenis","Non");
 		$data['dbSatu'] = $this->Model_laundry->ambilLaundryBy($outlet,"jenis","Satuan");
@@ -242,7 +242,7 @@ class Administrator extends CI_Controller {
 		$this->load->view('admin/template', $data);
 	}
 	function layanan_form($outlet,$id,$status,$error){
-		$data['page_title']="Waroenk Laundry | Administrator - Laundry";
+		$data['page_title']="Hai Laundry | Administrator - Laundry";
 		$data['content']='main/setting/laundry_form';
 		$data['link'] = anchor( $this->mza_secureurl->setSecureUrl_encode('administrator','layanan',array($outlet)),'Kembali',array('class' => 'back') );
 		$data['tLegend'] = $status;
@@ -367,7 +367,7 @@ class Administrator extends CI_Controller {
 	// PEWANGI
 	function pewangi($outlet){
 		$data['content'] = 'admin/setting/setting_pewangi';
-		$data['page_title'] = "Waroenk Laundry | Administrator";
+		$data['page_title'] = "Hai Laundry | Administrator";
 		// pewangi
 		$data['table_pewangi'] = $this->create_table_pewangi($outlet);
 		$data['form_wangi']= site_url( $this->mza_secureurl->setSecureUrl_encode('administrator','pewangi_process',array($outlet)) );
@@ -425,7 +425,7 @@ class Administrator extends CI_Controller {
 	// PROMO
 	function promo($outlet){
 		$data['content'] = 'admin/setting/setting_promo';
-		$data['page_title'] = "Waroenk Laundry | Administrator";
+		$data['page_title'] = "Hai Laundry | Administrator";
 		// promo
 		$data['table_promo'] = $this->create_table_promo($outlet);
 		$data['addpromo']=anchor($this->mza_secureurl->setSecureUrl_encode('administrator','promo_form',array($outlet,0,0,'Tambah','NO')),'Tambah Promo',array('class' => 'add'));
@@ -433,7 +433,7 @@ class Administrator extends CI_Controller {
 		$this->load->view('admin/template', $data);
 	}
 	function promo_form($outlet,$id,$group,$status,$error){
-		$data['page_title'] = "Waroenk Laundry | Administrator - Promo";
+		$data['page_title'] = "Hai Laundry | Administrator - Promo";
 		$data['content'] = 'main/setting/promo_form';
 		$data['link'] = anchor( $this->mza_secureurl->setSecureUrl_encode('administrator','promo',array($outlet)),'Kembali',array('class' => 'back') );
 		$data['list_promo'] = $this->list_promo($group);
@@ -578,7 +578,7 @@ class Administrator extends CI_Controller {
 	// PEGAWAI
 	function user($outlet){
 		$data['content'] = 'admin/setting/setting_user';
-		$data['page_title'] = "Waroenk Laundry | Administrator";
+		$data['page_title'] = "Hai Laundry | Administrator";
 		// pegawai
 		$data['table_pegawai'] = $this->create_table_pegawai($outlet);
 		$data['addpegawai']=anchor($this->mza_secureurl->setSecureUrl_encode('administrator','pegawai_form',array($outlet,0,'Tambah')),'Tambah Pegawai',array('class' => 'add-user'));
@@ -589,7 +589,7 @@ class Administrator extends CI_Controller {
 		$this->load->view('admin/template',$this->view_pegawai_form($outlet,$pegawai_id,$status,'NO'));
 	}
 	function view_pegawai_form($outlet,$pegawai_id,$status,$error){
-		$data['page_title']="Waroenk Laundry | Administrator - Pegawai";
+		$data['page_title']="Hai Laundry | Administrator - Pegawai";
 		$data['content']='main/setting/pegawai_form';
 		$data['error']=$error;
 		
@@ -723,7 +723,7 @@ class Administrator extends CI_Controller {
 	// ASET
 	function aset($outlet){
 		$data['content'] = 'admin/setting/setting_aset';
-		$data['page_title'] = "Waroenk Laundry | Administrator";
+		$data['page_title'] = "Hai Laundry | Administrator";
 		// aset
 		$data['table_aset'] = $this->create_table_aset($outlet);
 		$data['form_aset']= site_url( $this->mza_secureurl->setSecureUrl_encode('administrator','aset_process',array($outlet,"NO")) );
@@ -737,7 +737,7 @@ class Administrator extends CI_Controller {
 		$this->load->view('admin/template', $data);
 	}
 	function aset_form($outlet,$status,$error){
-		$data['page_title']="Waroenk Laundry | Administrator - Aset";
+		$data['page_title']="Hai Laundry | Administrator - Aset";
 		$data['content']='main/setting/aset_form';
 		$data['link'] = anchor( $this->mza_secureurl->setSecureUrl_encode('administrator','aset',array($outlet)),'Kembali',array('class' => 'back') );
 		$data['form_aset']= site_url( $this->mza_secureurl->setSecureUrl_encode('administrator','aset_process',array($outlet,$status)) );
@@ -879,7 +879,7 @@ class Administrator extends CI_Controller {
 	// INVENTORI
 	function inventori($outlet){
 		$data['content'] = 'admin/setting/setting_inventori';
-		$data['page_title'] = "Waroenk Laundry | Administrator";
+		$data['page_title'] = "Hai Laundry | Administrator";
 		// inventory
 		$data['table_stok'] = $this->create_table_stok($outlet);
 		$data['form_stok']= site_url( $this->mza_secureurl->setSecureUrl_encode('administrator','stok_process',array($outlet)) );
@@ -981,7 +981,7 @@ class Administrator extends CI_Controller {
 	// INVESTOR
 	function investorList(){
 		$data['content'] = 'admin/investor/invest_list';
-		$data['page_title'] = "Waroenk Laundry | Investor";
+		$data['page_title'] = "Hai Laundry | Investor";
 		$data['tLegend'] = "Investor";
 		$data['tabelInvest'] = $this->tableInvestor();
 		$data['add_inv']= site_url( $this->mza_secureurl->setSecureUrl_encode('administrator','investorAdd') );
@@ -993,7 +993,7 @@ class Administrator extends CI_Controller {
 	}
 	function investorForm($id,$error){
 		$data['content'] = 'admin/investor/invest_form';
-		$data['page_title'] = "Waroenk Laundry | Profil Investor";
+		$data['page_title'] = "Hai Laundry | Profil Investor";
 		$data['form_pegawai']= site_url( $this->mza_secureurl->setSecureUrl_encode('administrator','investorProcess',array($id,"Edit")) );
 		$data['form_pass']= site_url( $this->mza_secureurl->setSecureUrl_encode('administrator','investorProcess',array($id,"Pass")) );
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode("administrator","investorList") );

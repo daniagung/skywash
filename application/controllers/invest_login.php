@@ -10,14 +10,14 @@ class Invest_login extends CI_Controller {
 	
 	function index() {
 		if($_POST==NULL){
-			$data['page_title'] = "Waroenk Laundry | Login Investor";
+			$data['page_title'] = "Hai Laundry | Login Investor";
 			$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_login','index') );
 			$data['error']='NO';
 			
 			$this->load->view('invest/sx_login', $data);
 		} else {
 			if ($this->form_validation->run('login') == FALSE){
-				$data['page_title'] = "Waroenk Laundry | Login Investor";
+				$data['page_title'] = "Hai Laundry | Login Investor";
 				$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode('invest_login','index') );
 				$data['error']='YES';
 				$this->load->view('invest/sx_login', $data);

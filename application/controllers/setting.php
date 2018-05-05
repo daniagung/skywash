@@ -12,7 +12,7 @@ class Setting extends CI_Controller {
 	
 	function index(){
 		$data['content'] = 'main/setting/setting_view';
-		$data['page_title'] = "Waroenk Laundry | Konfigurasi";
+		$data['page_title'] = "Hai Laundry | Konfigurasi";
 		
 		$data['table_laundry'] = $this->create_table_laundry();
 		$data['table_pewangi'] = $this->create_table_pewangi();
@@ -25,7 +25,7 @@ class Setting extends CI_Controller {
 	
 	// MASTER LAUNDRY
 	function laundry_form($id,$status,$error){
-		$data['page_title']="Waroenk Laundry | Konfigurasi - Laundry";
+		$data['page_title']="Hai Laundry | Konfigurasi - Laundry";
 		$data['content']='main/setting/laundry_form';
 		$data['form_laundry']= site_url( $this->mza_secureurl->setSecureUrl_encode('setting','laundry_process',array($id,$status)) );
 		$data['link'] = anchor( $this->mza_secureurl->setSecureUrl_encode('setting','index'),'Kembali',array('class' => 'back') );
@@ -151,7 +151,7 @@ class Setting extends CI_Controller {
 	
 	// PEGAWAI
 	function pegawai_detail($pegawai_id){
-		$data['page_title']="Waroenk Laundry | Konfigurasi - Pegawai";
+		$data['page_title']="Hai Laundry | Konfigurasi - Pegawai";
 		$data['content']='main/setting/pegawai_detail';
 		$data['link'] = anchor( $this->mza_secureurl->setSecureUrl_encode('setting','index'),'Kembali',array('class' => 'back') );
 		$data['pegawai'] = $this->Model_user->get_pegawai_by("id_pegawai",$pegawai_id)->row();

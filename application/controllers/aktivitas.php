@@ -14,7 +14,7 @@ class Aktivitas extends CI_Controller {
 	function index($error){
 		$data['content'] = 'main/activity/transaksi';
 		$data['tab'] = 'main/activity/form_cari_order';
-		$data['page_title'] = "Waroenk Laundry | Transaksi";
+		$data['page_title'] = "Hai Laundry | Transaksi";
 		$data['fresi'] = site_url( $this->mza_secureurl->setSecureUrl_encode("aktivitas","cariResi") );
 		$data['error'] = $error;
 		
@@ -26,7 +26,7 @@ class Aktivitas extends CI_Controller {
 	function transMem($error){
 		$data['content'] = 'main/activity/transaksi';
 		$data['tab'] = 'main/activity/form_m';
-		$data['page_title'] = "Waroenk Laundry | Transaksi";
+		$data['page_title'] = "Hai Laundry | Transaksi";
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode("home","index",array("NO")) );
 		$data['error'] = $error;
 		
@@ -68,7 +68,7 @@ class Aktivitas extends CI_Controller {
 	function transNon($error){
 		$data['content'] = 'main/activity/transaksi';
 		$data['tab'] = 'main/activity/form_non';
-		$data['page_title'] = "Waroenk Laundry | Transaksi";
+		$data['page_title'] = "Hai Laundry | Transaksi";
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode("home","index",array("NO")) );
 		$data['error'] = $error;
 		
@@ -106,7 +106,7 @@ class Aktivitas extends CI_Controller {
 	function statCuci($error){
 		$data['content'] = 'main/activity/transaksi';
 		$data['tab'] = 'main/activity/status_order';
-		$data['page_title'] = "Waroenk Laundry | Transaksi";
+		$data['page_title'] = "Hai Laundry | Transaksi";
 		$data['error'] = $error;
 		
 		// STATUS CUCIAN
@@ -724,7 +724,7 @@ class Aktivitas extends CI_Controller {
 	}
 	function pembayaran($resi,$error){
 		$data['content'] = 'main/activity/transaksi_bayar';
-		$data['page_title'] = "Waroenk Laundry | Transaksi";
+		$data['page_title'] = "Hai Laundry | Transaksi";
 		$data['bayar_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode("aktivitas","cekPromo",array($resi)) );
 		$data['tRow'] = $this->Model_laundry->ambilTransaksi($this->session->userdata('id'),"resi",$resi)->row();
 		$data['dbDetail'] = $this->Model_laundry->ambilTransNon("resi",$resi)->result();
@@ -840,7 +840,7 @@ class Aktivitas extends CI_Controller {
 		}
 	}
 	function cetakTransaksi($resi){
-		$data['page_title'] = "Waroenk Laundry | Transaksi";
+		$data['page_title'] = "Hai Laundry | Transaksi";
 		$data['tRow'] = $this->Model_laundry->ambilTransaksi($this->session->userdata('id'),"resi",$resi)->row();
 		$data['dbDetail'] = $this->Model_laundry->ambilTransNon("resi",$resi)->result();
 		$data['dbExtra'] = $this->Model_laundry->ambilExtra("resi",$resi)->result();
@@ -858,7 +858,7 @@ class Aktivitas extends CI_Controller {
 	/* PILIH AKTIVITAS*/
 	function pilihAct($resi){
 		$data['content'] = 'main/activity/act_pilih';
-		$data['page_title'] = "Waroenk Laundry | Pilih Aktivitas";
+		$data['page_title'] = "Hai Laundry | Pilih Aktivitas";
 		$data['tRow'] = $this->Model_laundry->ambilTransaksi($this->session->userdata('id'),"resi",$resi)->row();
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode("aktivitas","index",array("NO")) );
 		
@@ -867,7 +867,7 @@ class Aktivitas extends CI_Controller {
 	/* CEKLIST */
 	function ceklist($resi,$error){
 		$data['content'] = 'main/activity/act_ceklist';
-		$data['page_title'] = "Waroenk Laundry | Ceklist";
+		$data['page_title'] = "Hai Laundry | Ceklist";
 		$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode("aktivitas","prosesCeklist",array($resi)) );
 		$data['tRow'] = $this->Model_laundry->ambilTransaksi($this->session->userdata('id'),"resi",$resi)->row();
 		$data['staff'] = $this->Model_general->getData("wl_pegawai","nama_pegawai")->result();
@@ -946,7 +946,7 @@ class Aktivitas extends CI_Controller {
 	}
 	function detailCek($resi,$jumlah,$nip){
 		$data['content'] = 'main/activity/act_ceklist_detail';
-		$data['page_title'] = "Waroenk Laundry | Ceklist";
+		$data['page_title'] = "Hai Laundry | Ceklist";
 		$data['cetakCek'] = site_url( $this->mza_secureurl->setSecureUrl_encode("aktivitas","cetakCek",array($resi,$jumlah,$nip)) );
 		$data['tRow'] = $this->Model_laundry->ambilTransaksi($this->session->userdata('id'),"resi",$resi)->row();
 		$data['dbCeklist'] = $this->Model_laundry->ambilCeklistDetail("resi",$resi)->result();
@@ -974,7 +974,7 @@ class Aktivitas extends CI_Controller {
 	/* CUCI */
 	function cuci($resi,$error){
 		$data['content'] = 'main/activity/act_cuci';
-		$data['page_title'] = "Waroenk Laundry | Cuci";
+		$data['page_title'] = "Hai Laundry | Cuci";
 		$data['tRow'] = $this->Model_laundry->ambilCeklist("resi",$resi)->row();
 		$data['staff'] = $this->Model_general->getData("wl_pegawai","nama_pegawai")->result();
 		$data['mcuci'] = $this->Model_general->getDataBy("wl_aset","jenis_aset","01")->result();
@@ -1044,7 +1044,7 @@ class Aktivitas extends CI_Controller {
 	/* PENGERINGAN */
 	function kering($resi,$error){
 		$data['content'] = 'main/activity/act_kering';
-		$data['page_title'] = "Waroenk Laundry | Pengeringan";
+		$data['page_title'] = "Hai Laundry | Pengeringan";
 		$data['tRow'] = $this->Model_laundry->ambilCeklist("resi",$resi)->row();
 		$data['staff'] = $this->Model_general->getData("wl_pegawai","nama_pegawai")->result();
 		$data['mkrg'] = $this->Model_general->getDataBy("wl_aset","jenis_aset","02")->result();
@@ -1114,7 +1114,7 @@ class Aktivitas extends CI_Controller {
 	/* PACKING */
 	function packing($resi,$error){
 		$data['content'] = 'main/activity/act_packing';
-		$data['page_title'] = "Waroenk Laundry | Packing";
+		$data['page_title'] = "Hai Laundry | Packing";
 		$data['staff'] = $this->Model_general->getData("wl_pegawai","nama_pegawai")->result();
 		$data['mstr'] = $this->Model_general->getDataBy("wl_aset","jenis_aset","03")->result();
 		$data['tRow'] = $this->Model_laundry->ambilTransaksi($this->session->userdata('id'),"resi",$resi)->row();
@@ -1175,7 +1175,7 @@ class Aktivitas extends CI_Controller {
 	/* PENGAMBILAN */
 	function ambil($resi,$error){
 		$data['content'] = 'main/activity/act_ambil';
-		$data['page_title'] = "Waroenk Laundry | Ambil";
+		$data['page_title'] = "Hai Laundry | Ambil";
 		$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode("aktivitas","prosesAmbil",array($resi)) );
 		$data['tRow'] = $this->Model_laundry->ambilTransaksi($this->session->userdata('id'),"resi",$resi)->row();
 		$data['dbExtra'] = $this->Model_laundry->ambilExtra("resi",$resi)->result();
@@ -1212,7 +1212,7 @@ class Aktivitas extends CI_Controller {
 	/* PENGANTARAN */
 	function antar($resi,$error){
 		$data['content'] = 'main/activity/act_ambil';
-		$data['page_title'] = "Waroenk Laundry | Delivery";
+		$data['page_title'] = "Hai Laundry | Delivery";
 		$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode("aktivitas","prosesAntar",array($resi)) );
 		$data['tRow'] = $this->Model_laundry->ambilTransaksi($this->session->userdata('id'),"resi",$resi)->row();
 		$data['dbExtra'] = $this->Model_laundry->ambilExtra("resi",$resi)->result();
@@ -1288,7 +1288,7 @@ class Aktivitas extends CI_Controller {
 			$table = "sx_aktivitas a, sx_customer c, sx_invoice i, sx_job_monitor j";
 			$where = "a.resi = c.resi AND a.resi = i.resi AND a.resi = j.resi $cuci $bayar $cust $tgl AND a.outlet_id = " . $this->session->userdata('id');
 			
-			$data['page_title'] = "Waroenk Laundry | Monitoring Cucian";
+			$data['page_title'] = "Hai Laundry | Monitoring Cucian";
 			$data['scuci'] = $scuci;
 			$data['sbayar'] = $sbayar;
 			$data['scust'] = $scust;
@@ -1540,7 +1540,7 @@ class Aktivitas extends CI_Controller {
 	/* MONITORING */
 	function jobMonitor($resi){
 		$data['content'] = 'main/activity/transaksi_monitoring';
-		$data['page_title'] = "Waroenk Laundry | Monitoring Cucian";
+		$data['page_title'] = "Hai Laundry | Monitoring Cucian";
 		$data['tRow'] = $this->Model_laundry->ambilTransaksi($this->session->userdata('id'),"resi",$resi)->row();
 		$ambil = $this->Model_general->getDataBy("sx_job_monitor","resi",$resi)->row();
 		$id[1] = $ambil->id_trans;
@@ -1611,7 +1611,7 @@ class Aktivitas extends CI_Controller {
 	
 	function detailAktivitas($resi,$error){
 		$data['content'] = 'main/activity/transaksi_detail';
-		$data['page_title'] = "Waroenk Laundry | Transaksi";
+		$data['page_title'] = "Hai Laundry | Transaksi";
 		$data['form_komplain'] = site_url( $this->mza_secureurl->setSecureUrl_encode("aktivitas","transKomplain",array($resi)) );
 		$data['tRow'] = $this->Model_laundry->ambilTransaksi($this->session->userdata('id'),"resi",$resi)->row();
 		$data['dbDetail'] = $this->Model_laundry->ambilTransNon("resi",$resi)->result();

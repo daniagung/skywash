@@ -12,7 +12,7 @@ class Investor extends CI_Controller {
 	
 	function index(){
 		$data['content'] = 'invest/sx_home';
-		$data['page_title'] = "Hai Laundry | Selamat Datang";
+		$data['page_title'] = "Skywash Laundry | Selamat Datang";
 		$data['ambil'] = $this->Model_general->getDataBy("master_invest","invest_id",$this->session->userdata('id'))->row();
 		$data['pesan'] = $this->Model_general->countDataWhere("master_invest_pesan","id_invest = ". $this->session->userdata('id') ." AND status_pesan = 'Unread'");
 		$data['cek'] = $this->session->userdata('out');
@@ -23,7 +23,7 @@ class Investor extends CI_Controller {
 	/* PROFIL */
 	function profil($error){
 		$data['content'] = 'invest/invest_form';
-		$data['page_title'] = "Hai Laundry | Profil Investor";
+		$data['page_title'] = "Skywash Laundry | Profil Investor";
 		$data['form_pegawai']= site_url( $this->mza_secureurl->setSecureUrl_encode('investor','profil_process',array("")) );
 		$data['form_pass']= site_url( $this->mza_secureurl->setSecureUrl_encode('investor','profil_process',array("Pass")) );
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode("investor","index") );
@@ -60,7 +60,7 @@ class Investor extends CI_Controller {
 	/* PESAN */
 	function pesan($id_pesan){
 		$data['content'] = 'invest/invest_pesan';
-		$data['page_title'] = "Hai Laundry | Pesan";
+		$data['page_title'] = "Skywash Laundry | Pesan";
 		if($id_pesan > 0){
 			$data['pesan'] = $this->Model_general->getDataBy("master_invest_pesan","id_pesan",$id_pesan)->row();
 			$this->Model_general->updateData("master_invest_pesan","id_pesan",$id_pesan,array( 'status_pesan' => "Read" ));

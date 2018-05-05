@@ -11,7 +11,7 @@ class Karyawan extends CI_Controller {
 	
 	function index($nip){
 		$data['content'] = 'main/karyawan/kar_home';
-		$data['page_title'] = "Hai Laundry | Karyawan";
+		$data['page_title'] = "Skywash Laundry | Karyawan";
 		$data['ambil'] = $this->Model_general->getDataBy("wl_pegawai","nip",$nip)->row();
 		$data['pesan'] = $this->Model_general->countDataWhere("wl_pegawai_pesan","nip = '$nip' AND status_pesan = 'Unread'");
 		$data['nip'] = $nip;
@@ -49,7 +49,7 @@ class Karyawan extends CI_Controller {
 	/* PROFIL */
 	function profil($nip,$error){
 		$data['content'] = 'main/karyawan/kar_form';
-		$data['page_title'] = "Hai Laundry | Profil Karyawan";
+		$data['page_title'] = "Skywash Laundry | Profil Karyawan";
 		$data['form_pegawai']= site_url( $this->mza_secureurl->setSecureUrl_encode('karyawan','profil_process',array($nip,"")) );
 		$data['form_pass']= site_url( $this->mza_secureurl->setSecureUrl_encode('karyawan','profil_process',array($nip,"Pass")) );
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode("karyawan","index",array($nip)) );
@@ -107,7 +107,7 @@ class Karyawan extends CI_Controller {
 	/* PESAN */
 	function pesan($nip,$id_pesan){
 		$data['content'] = 'main/karyawan/kar_pesan';
-		$data['page_title'] = "Hai Laundry | Pesan";
+		$data['page_title'] = "Skywash Laundry | Pesan";
 		if($id_pesan > 0){
 			$data['pesan'] = $this->Model_general->getDataBy("wl_pegawai_pesan","id_pesan",$id_pesan)->row();
 			$this->Model_general->updateData("wl_pegawai_pesan","id_pesan",$id_pesan,array( 'status_pesan' => "Read" ));
@@ -183,7 +183,7 @@ class Karyawan extends CI_Controller {
 	/* ABSENSI */
 	function absensi($nip){
 		$data['content'] = 'main/karyawan/kar_absen';
-		$data['page_title'] = "Hai Laundry | Absensi";
+		$data['page_title'] = "Skywash Laundry | Absensi";
 		$data['ambil'] = $this->Model_general->getDataBy("wl_pegawai","nip",$nip)->row();
 		$query = $this->Model_general->getDataWhere("wl_pegawai_absen","nip = '$nip' AND tgl_absen = '" . date('Y/m/d') . "'");
 		if($query->num_rows() > 0){
@@ -254,7 +254,7 @@ class Karyawan extends CI_Controller {
 	/* KINERJA */
 	function kinerja($nip){
 		$data['content'] = 'main/karyawan/kar_kinerja';
-		$data['page_title'] = "Hai Laundry | Kinerja";
+		$data['page_title'] = "Skywash Laundry | Kinerja";
 		$data['ambil'] = $this->Model_general->getDataBy("wl_pegawai","nip",$nip)->row();
 		$data['kinerja_f'] = site_url( $this->mza_secureurl->setSecureUrl_encode("karyawan","kinerja",array($nip)) );
 		$periode = $this->input->post('periode');

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d0fb75-f64b-49ae-87b1-f8b2a358a25a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/admin_finance.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin_finance.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/admin_grafik.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin_grafik.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/admin_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin_login.php" afterDir="false" />
@@ -28,20 +28,10 @@
       <change beforePath="$PROJECT_DIR$/application/views/main/customer/deposit_cetak.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/customer/deposit_cetak.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/main/customer/deposit_history.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/customer/deposit_history.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/main/customer/transaksi_history.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/customer/transaksi_history.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._deleteTable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._getCust.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._getMember.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._graph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._increment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._jquery-1.9.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._jquery-barcode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._jquery.chained.mini.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._jquery.dataTables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._jquery.jgrowl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._jquery.ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/js/._tabber.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/main/sx_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/sx_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/img/comp-logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/img/comp-logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/themes/img/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/img/warning.png" beforeDir="false" afterPath="$PROJECT_DIR$/themes/img/warning.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,22 +41,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="187" column="39" selection-start-line="187" selection-start-column="39" selection-end-line="187" selection-end-column="39" />
+            <state relative-caret-position="184">
+              <caret line="181" column="51" selection-start-line="181" selection-start-column="51" selection-end-line="181" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Hai Laundry</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Skywash Laundry</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,11 +73,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
-    <option name="height" value="968" />
+    <option name="height" value="969" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -97,24 +90,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="hai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hai" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hai" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hai" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hai" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="skywash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skywash" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -149,33 +126,34 @@
       <option name="presentableId" value="Default" />
       <updated>1525507774188</updated>
       <workItem from="1525507794563" duration="397000" />
+      <workItem from="1525508739894" duration="635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="397000" />
+    <option name="totallyTimeSpent" value="1032000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22526042" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -187,13 +165,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/system/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3179">
+          <caret line="187" column="39" selection-start-line="187" selection-start-column="39" selection-end-line="187" selection-end-column="39" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="187" column="39" selection-start-line="187" selection-start-column="39" selection-end-line="187" selection-end-column="39" />
+        <state relative-caret-position="184">
+          <caret line="181" column="51" selection-start-line="181" selection-start-column="51" selection-end-line="181" selection-end-column="51" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,5 @@
 <head>
-	<title>Hai Laundry | Nota Ceklist</title>
+	<title>Skywash Laundry | Nota Ceklist</title>
 	<script type="text/javascript">
 		window.print();
 		window.onfocus=function(){ window.close(); }

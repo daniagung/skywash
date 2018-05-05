@@ -12,7 +12,7 @@ class Sms extends CI_Controller {
 	
 	function message($jenis){
 		$data['content'] = 'admin/sms/message';
-		$data['page_title'] = "Hai Laundry | SMS Gateway";
+		$data['page_title'] = "Skywash Laundry | SMS Gateway";
 		$data['table_sms'] = $this->table_sms($jenis);
 		$data['send'] = site_url( $this->mza_secureurl->setSecureUrl_encode('sms','message_send') );
 		

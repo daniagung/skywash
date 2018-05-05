@@ -10,13 +10,13 @@ class Login extends CI_Controller {
 	
 	function index(){
 		if($_POST==NULL){
-			$data['page_title'] = "Hai Laundry | Login";
+			$data['page_title'] = "Skywash Laundry | Login";
 			$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode('login','index') );
 			$data['error']='NO';
 			$this->load->view('main/sx_login', $data);
 		} else {
 			if ($this->form_validation->run('login') == FALSE){
-				$data['page_title'] = "Hai Laundry | Login";
+				$data['page_title'] = "Skywash Laundry | Login";
 				$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode('login','index') );
 				$data['error']='YES';
 				$this->load->view('main/sx_login', $data);

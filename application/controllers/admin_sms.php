@@ -13,7 +13,7 @@ class Admin_sms extends CI_Controller {
 	// INBOX
 	function inbox($id,$error){
 		$data['content'] = 'admin/sms/sms_inbox';
-		$data['page_title'] = "Hai Laundry | Kotak Masuk";
+		$data['page_title'] = "Skywash Laundry | Kotak Masuk";
 		$data['sendSMS'] = "<a id='add-sms' class='sms'>Kirim SMS</a>";
 		$data['emptySMS'] = anchor( $this->mza_secureurl->setSecureUrl_encode('admin_sms','emptySMS',array("inbox","inbox")),'Kosongkan',array('class' => 'empty','onclick' => 'return confirm(\'Kosongkan Kotak Masuk ?\')') );
 		$data['sms_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_sms','send') );
@@ -98,7 +98,7 @@ class Admin_sms extends CI_Controller {
 	}
 	function reply($id,$error){
 		$data['content'] = 'admin/sms/sms_balas';
-		$data['page_title'] = "Hai Laundry | Balas SMS";
+		$data['page_title'] = "Skywash Laundry | Balas SMS";
 		$data['link'] = anchor( $this->mza_secureurl->setSecureUrl_encode('admin_sms','inbox',array(0,'NO')),'Kembali',array('class' => 'back') );
 		$data['sms_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_sms','send') );
 		$data['pesan'] = $this->Model_general->getDataBy("inbox","ID",$id)->row();
@@ -139,7 +139,7 @@ class Admin_sms extends CI_Controller {
 	// OUTBOX
 	function outbox($id,$error){
 		$data['content'] = 'admin/sms/sms_outbox';
-		$data['page_title']="Hai Laundry | Kotak Keluar";
+		$data['page_title']="Skywash Laundry | Kotak Keluar";
 		$data['emptySMS'] = anchor( $this->mza_secureurl->setSecureUrl_encode('admin_sms','emptySMS',array("outbox","outbox")),'Kosongkan',array('class' => 'empty','onclick' => 'return confirm(\'Kosongkan Kotak Keluar ?\')') );
 		$data['tableOutbox'] = $this->tableOutbox();
 		if($id > 0){
@@ -217,7 +217,7 @@ class Admin_sms extends CI_Controller {
 	// SENT
 	function sent($id,$error){
 		$data['content'] = 'admin/sms/sms_sent';
-		$data['page_title']="Hai Laundry | Kotak Keluar";
+		$data['page_title']="Skywash Laundry | Kotak Keluar";
 		$data['emptySMS'] = anchor( $this->mza_secureurl->setSecureUrl_encode('admin_sms','emptySMS',array("sentitems","sent")),'Kosongkan',array('class' => 'empty','onclick' => 'return confirm(\'Kosongkan Pesan Terkirim ?\')') );
 		$data['tableSent'] = $this->tableSent();
 		if($id > 0){
@@ -295,7 +295,7 @@ class Admin_sms extends CI_Controller {
 	// BROADCAST
 	function broadcast($id,$error){
 		$data['content'] = 'admin/sms/sms_broadcast';
-		$data['page_title'] = "Hai Laundry | SMS Broadcast";
+		$data['page_title'] = "Skywash Laundry | SMS Broadcast";
 		$data['eventSMS'] = anchor( $this->mza_secureurl->setSecureUrl_encode('admin_sms','broadForm',array('new',0,'NO')),'Event Broadcast Baru',array('class' => 'sms') );
 		$data['sms_form'] = site_url( $this->mza_secureurl->setSecureUrl_encode('admin_sms','send') );
 		$data['tableBroad'] = $this->tableBroad();
@@ -308,7 +308,7 @@ class Admin_sms extends CI_Controller {
 	}
 	function broadForm($status,$id,$error){
 		$data['content']="admin/sms/sms_broadcast_$status";
-		$data['page_title'] = "Hai Laundry | Event Broadcast";
+		$data['page_title'] = "Skywash Laundry | Event Broadcast";
 		$data['form_sms']= site_url( $this->mza_secureurl->setSecureUrl_encode('admin_sms','sendBroadcast',array($status,$id)) );
 		$data['link'] = anchor( $this->mza_secureurl->setSecureUrl_encode('admin_sms','broadcast',array(0,'NO')),'Kembali',array('class' => 'back') );
 		$data['error']=$error;
@@ -443,14 +443,14 @@ class Admin_sms extends CI_Controller {
 	// KONFIGURASI
 	function konfig(){
 		$data['content'] = 'admin/sms/sms_konfigur';
-		$data['page_title']="Hai Laundry | Konfigurasi SMS";
+		$data['page_title']="Skywash Laundry | Konfigurasi SMS";
 		$data['tableMaster'] = $this->tableMaster();
 		
 		$this->load->view('admin/template', $data);
 	}
 	function masterForm($tipe,$error){
 		$data['content']='admin/sms/sms_master';
-		$data['page_title']="Hai Laundry | Konfigurasi SMS";
+		$data['page_title']="Skywash Laundry | Konfigurasi SMS";
 		$data['form_sms']= site_url( $this->mza_secureurl->setSecureUrl_encode('admin_sms','masterSimpan',array($tipe)) );
 		$data['link'] = anchor( $this->mza_secureurl->setSecureUrl_encode('admin_sms','konfig'),'Kembali',array('class' => 'back') );
 		$data['sms'] = $this->Model_general->getDataBy("master_pesan","tipe_pesan",$tipe)->row();

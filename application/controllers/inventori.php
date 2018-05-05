@@ -12,7 +12,7 @@ class Inventori extends CI_Controller {
 	// STOK
 	function index($error){
 		$data['content'] = 'main/activity/second/second';
-		$data['page_title'] = "Hai Laundry | Inventori";
+		$data['page_title'] = "Skywash Laundry | Inventori";
 		$data['tLegend'] = "Inventori";
 		$data['tabelSecond'] = $this->tabelStok();
 		$data['error'] = $error;
@@ -22,7 +22,7 @@ class Inventori extends CI_Controller {
 	
 	function stok_form($id,$jenis,$error){
 		$data['content'] = 'main/activity/second/stok_form';
-		$data['page_title'] = "Hai Laundry | Inventori";
+		$data['page_title'] = "Skywash Laundry | Inventori";
 		$data['form_action'] = site_url( $this->mza_secureurl->setSecureUrl_encode("inventori","stok_proses",array($id,$jenis)) );
 		$data['tRow'] = $this->Model_laundry->ambilStokBy($this->session->userdata('id'),"id_stock",$id)->row();
 		$data['back'] = site_url( $this->mza_secureurl->setSecureUrl_encode("inventori","index",array("NO")) );

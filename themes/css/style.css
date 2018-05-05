@@ -825,7 +825,7 @@ pre
   overflow:hidden;
   padding: 1px 10px;
   background-image: url('../img/postmetadataheader_bg.png');
-  border-color: #CFC8A0;
+  border-color: #33bfb5;
   border-style: solid;
   border-width: 0;
   -webkit-border-radius: 10px;
@@ -837,7 +837,7 @@ pre
 /* begin PostHeaderIcon */
 h2.art-postheader
 {
-  color: #222310;
+  color: #17b7ae;
   margin: 3px 0 3px 0;
 }
 

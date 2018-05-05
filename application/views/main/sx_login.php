@@ -17,7 +17,7 @@
 			<div class="art-sheet" style="padding-top:150px">
 				<center>
                     <div class="loginbox">
-						<img src="<?php echo base_url(); ?>themes/img/comp-logo.jpg" title="Waroenk Laundry"/><br/><br/><br/>
+						<img src="<?php echo base_url(); ?>themes/img/comp-logo.jpg" title="Hai Laundry"/><br/><br/><br/>
 					<?php if ($error == 'YES') {?>
 						<div class="attention" style='width:100%;'>
 							<?php echo form_error('username', ' ', ' '); ?>
